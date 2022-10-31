@@ -1,5 +1,9 @@
 <?php
 
-$filePath = __DIR__."/../bin/phpunit";
+$execFilePath = __DIR__ . "/../bin/phpunit-exec";
+$mainFilePath = __DIR__ . "/../bin/phpunit";
 
-exec('chmod +x '.$filePath);
+echo "Make files executable\n";
+
+exec('chmod +x '.$execFilePath);
+exec('chmod +x '.$mainFilePath);
