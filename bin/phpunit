@@ -1,3 +1,11 @@
 #!/bin/php
+<?php
 
-echo "Test";
+$execPath = __DIR__ . "/phpunit-exec.phar";
+$autoloaderPath = __DIR__.'/../../OoAutoloader/Autoloader.php';
+
+$execParams = '--bootstrap '.$autoloaderPath;
+
+array_shift($argv);
+
+system($execPath." $execParams ".implode(" ", $argv), $result);
