@@ -4,5 +4,10 @@
     "description": "Simple script to download and execute latest phpunit",
     "repo_url": "https://github.com/coding-liki/phpunit.git",
     "version": "0.1",
-    "after_full_install_script":"scripts/afterInstall.php"
+    "after_full_install_script":"scripts/afterInstall.php",
+    "bins": {
+        "unit": {
+            "path": "./vendor/CodingLiki/Phpunit/bin/phpunit"
+        }
+    }
 }
